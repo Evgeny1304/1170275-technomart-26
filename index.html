@@ -1,12 +1,60 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Техномарт</title>
-  </head>
-  <body>
-
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p>
-
-  </body>
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Техномарт</title>
+</head>
+<body>
+<!--Шапка сайта-->
+<header class="header">
+  <div class="container">
+    <div class="header-left">
+      <a href="#" class="logo">ТЕХНОМАРТ</a>
+      <form action="#" class="search">
+        <input class="search__field" type="search" placeholder="Поиск:">
+        <button class="search__button" type="button">Найти</button>
+      </form>
+    </div>
+    <div class="header-right">
+      <p class="header-right__text">Закладки: <span>0</span></p>
+      <p class="header-right__text">Корзина: <span>0</span></p>
+      <a class="header-right__link" href="#">Оформить заказ</a>
+    </div>
+  </div>
+</header>
+<!--Информация о магазине-->
+<section class="about">
+  <div class="container">
+    <div class="offer">
+      <p class="offer__text"><i>Интернет магазин строительных материалов и инструментов для ремонта</i></p>
+      <div class="address">
+        <a href="tel: +78125550555" class="address__phone">+7 (812) 555-05-55</a>
+        <p class="address__city">г. Санкт-Петербург, ул. Конюшенная, д. 19/8</p>
+      </div>
+    </div>
+    <ul class="registration">
+      <li>
+        <button type="button" class="registration__button">Войти</button>
+      </li>
+      <li>
+        <button type="button" class="registration__button">Регистрация</button>
+      </li>
+    </ul>
+  </div>
+</section>
+<!--Меню сайта-->
+<nav class="navigation">
+  <div class="container">
+    <ul class="menu">
+      <li class="menu__list"><a href="#" class="menu__link">Главная</a></li>
+      <li class="menu__list"><a href="#" class="menu__link">Компания</a></li>
+      <li class="menu__list"><a href="#" class="menu__link">Каталог</a></li>
+      <li class="menu__list"><a href="#" class="menu__link">Новости</a></li>
+      <li class="menu__list"><a href="#" class="menu__link">Спецпредложения</a></li>
+      <li class="menu__list"><a href="#" class="menu__link">Доставка</a></li>
+      <li class="menu__list"><a href="#" class="menu__link">Контакты</a></li>
+    </ul>
+  </div>
+</nav>
+</body>
 </html>
