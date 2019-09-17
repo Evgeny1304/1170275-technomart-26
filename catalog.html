@@ -14,7 +14,7 @@
         </form>
         <ul class="header__list user-list">
             <li class="user-list__item"><a href="#" class="user-list__link">Закладки: <span>0</span></a></li>
-            <li class="user-list__item"><a href="#" class="user-list__link">Корзина: <span>0</span></a></li>
+            <li class="user-list__item"><a href="#" class="user-list__link">Корзина: <span>10</span></a></li>
             <li class="user-list__item"><a href="#" class="user-list__link">Оформить заказ</a></li>
         </ul>
     </div>
@@ -26,14 +26,13 @@
                 <p class="address__city">г. Санкт-Петербург, ул. Конюшенная, д. 19/8</p>
             </div>
         </div>
-        <ul class="header__registration registration">
-            <li class="registration__item">
-                <a href="#" class="registration__link">Войти</a>
-            </li>
-            <li class="registration__item">
-                <a href="#" class="registration__link">Регистрация</a>
-            </li>
-        </ul>
+        <div class="header__account account">
+            <button type="button" class="account__logout">Равшан Джамшутович</button>
+            <ul class="account__account-menu account-menu">
+                <li class="account-menu__item"><a href="#" class="account-menu__link">Мои заказы</a></li>
+                <li class="account-menu__item"><a href="#" class="account-menu__link">Личный кабинет</a></li>
+            </ul>
+        </div>
     </div>
     <nav class="header__navigation container">
         <ul class="menu">
@@ -51,7 +50,7 @@
 <main>
     <section class="breadcrumbs">
         <ul class="breadcrumbs__breadcrumb-list breadcrumb-list">
-            <li class="breadcrumb-list__item"><a href="#" class="breadcrumb-list__link">Домой</a></li>
+            <li class="breadcrumb-list__item"><a href="#" class="breadcrumb-list__link"><img src="img/icon-home.svg" alt="Домой"></a></li>
             <li class="breadcrumb-list__item"><a href="#" class="breadcrumb-list__link">Каталог</a></li>
             <li class="breadcrumb-list__item"><a href="#" class="breadcrumb-list__link">Инструмент</a></li>
             <li class="breadcrumb-list__item"><a href="#" class="breadcrumb-list__link">Перфораторы</a></li>
@@ -68,7 +67,7 @@
                     <input class="price-filter__range" name="plevel" id="price_id" type="range" min="0" max="50000"
                            step="1" value="30000"><br>
                     <p class="price-filter__text">
-                        <output for="price_id" name="level">30000</output>
+                        <output for="price_id" name="level" class="price-filter__output">30000</output>
                     </p>
                 </form>
             </div>
@@ -249,6 +248,14 @@
                     <a href="#" class="pagination__link">Вперед</a>
                 </li>
             </ul>
+            <div class="products-catalog__add-cart-popup add-cart-popup">
+                <p class="add-cart-popup__text">Товар добавлен в корзину!</p>
+                <ul class="add-cart-popup__add-cart-menu add-cart-menu">
+                    <li class="add-cart-menu__item"><a href="#" class="add-cart-menu__link">Оформить заказ</a></li>
+                    <li class="add-cart-menu__item"><a href="#" class="add-cart-menu__link">Продолжить покупки</a></li>
+                </ul>
+                <button type="button" class="add-cart-popup__btn-close btn-close"><img src="img/icon-close-popup.svg" alt="Кнопка закрытия окна"></button>
+            </div>
         </div>
     </section>
     <article class="conclusion">
@@ -305,11 +312,11 @@
             </li>
         </ul>
         <ul class="footer__development development-list">
-            <li class="development__item">
-                <p class="development__text">Обратная связь:<a href="mailto:mail@htmlacademy.ru" class="development__link">mail@htmlacademy.ru</a></p>
+            <li class="development-list__item">
+                <p class="development-list__text">Обратная связь:<a href="mailto:mail@htmlacademy.ru" class="development-list__link">mail@htmlacademy.ru</a></p>
             </li>
-            <li class="development__item">
-                <p class="development__text">Разработано - <a href="https://htmlacademy.ru/intensive/htmlcss" class="development__link" target="_blank">htmlacademy.ru</a></p>
+            <li class="development-list__item">
+                <p class="development-list__text">Разработано - <a href="https://htmlacademy.ru/intensive/htmlcss" class="development-list__link" target="_blank">htmlacademy.ru</a></p>
             </li>
         </ul>
     </div>
