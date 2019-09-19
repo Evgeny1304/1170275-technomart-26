@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Техномарт - каталог</title>
+    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,700|PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <header class="header">
@@ -47,7 +50,7 @@
     </nav>
 </header>
 
-<main>
+<main class="catalog-page">
     <section class="breadcrumbs">
         <ul class="breadcrumbs__breadcrumb-list breadcrumb-list">
             <li class="breadcrumb-list__item"><a href="#" class="breadcrumb-list__link"><img src="img/icon-home.svg" alt="Домой"></a></li>
@@ -59,7 +62,7 @@
     <section class="goods container">
         <h2 class="goods__title">Перфораторы</h2>
         <form action="#" class="goods__filters filters">
-            <h3 class="filters__title">Фильтры:</h3>
+            <h3 class="filters__title">Фильтр:</h3>
             <div class="filters__price-filter price-filter">
                 <h3 class="price-filter__title product-filter-title">Цена:</h3>
                 <form class="price-filter__form" onsubmit="return false"
@@ -248,7 +251,7 @@
                     <a href="#" class="pagination__link">Вперед</a>
                 </li>
             </ul>
-            <div class="products-catalog__add-cart-popup add-cart-popup">
+            <div class="products-catalog__add-cart-popup add-cart-popup modal-window">
                 <p class="add-cart-popup__text">Товар добавлен в корзину!</p>
                 <ul class="add-cart-popup__add-cart-menu add-cart-menu">
                     <li class="add-cart-menu__item"><a href="#" class="add-cart-menu__link">Оформить заказ</a></li>
@@ -313,7 +316,7 @@
         </ul>
         <ul class="footer__development development-list">
             <li class="development-list__item">
-                <p class="development-list__text">Обратная связь:<a href="mailto:mail@htmlacademy.ru" class="development-list__link">mail@htmlacademy.ru</a></p>
+                <p class="development-list__text">Обратная связь: <a href="mailto:mail@htmlacademy.ru" class="development-list__link">mail@htmlacademy.ru</a></p>
             </li>
             <li class="development-list__item">
                 <p class="development-list__text">Разработано - <a href="https://htmlacademy.ru/intensive/htmlcss" class="development-list__link" target="_blank">htmlacademy.ru</a></p>

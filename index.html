@@ -3,6 +3,9 @@
 <head>
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
+    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,700|PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <header class="header">
@@ -15,7 +18,7 @@
         <ul class="header__list user-list">
             <li class="user-list__item"><a href="#" class="user-list__link">Закладки: <span>0</span></a></li>
             <li class="user-list__item"><a href="#" class="user-list__link">Корзина: <span>0</span></a></li>
-            <li class="user-list__item"><a href="#" class="user-list__link">Оформить заказ</a></li>
+            <li class="user-list__item"><a href="#" class="user-list__link user-list__link_checkout">Оформить заказ</a></li>
         </ul>
     </div>
     <div class="header__description container">
@@ -233,13 +236,13 @@
             <h2 class="contact__title">Контакты</h2>
             <p class="contact__text">Вы можете забрать товар сами,
                 заехав в наш офис:</p>
-            <a href="https://goo.gl/maps/Wi1ShnMR9wf9tgB36" class="contact__link"><img src="img/small-map.jpg" alt="Расположение магазина на карте" width="300" height="158" class="contact__small-map"></a>
-            <div class="contact__map-popup">
+            <a href="https://goo.gl/maps/Wi1ShnMR9wf9tgB36" class="contact__map-link"><img src="img/small-map.jpg" alt="Расположение магазина на карте" width="300" height="158" class="contact__small-map"></a>
+            <div class="contact__map-popup modal-window">
                 <img src="img/big-map.jpg" alt="Расположение магазина на большой карте" width="940" height="446" class="contact__big-map">
                 <button type="button" class="contact__btn-close btn-close"><img src="img/icon-close-popup.svg" alt="Кнопка закрытия окна"></button>
             </div>
             <a href="#" class="contact__link">Заблудились? Напишите нам!</a>
-            <div class="contact__feedback-popup">
+            <div class="contact__feedback-popup modal-window">
                 <form action="#" class="contact__feedback feedback">
                     <label class="feedback__label">Ваше имя:<input type="text" placeholder="Имя Фамилия" class="feedback__field"></label>
                     <label class="feedback__label">Ваш e-mail:<input type="email" placeholder="email@example.com" class="feedback__field"></label>
@@ -295,7 +298,7 @@
         </ul>
         <ul class="footer__development development-list">
             <li class="development-list__item">
-                <p class="development-list__text">Обратная связь:<a href="mailto:mail@htmlacademy.ru" class="development-list__link">mail@htmlacademy.ru</a></p>
+                <p class="development-list__text">Обратная связь: <a href="mailto:mail@htmlacademy.ru" class="development-list__link">mail@htmlacademy.ru</a></p>
             </li>
             <li class="development-list__item">
                 <p class="development-list__text">Разработано - <a href="https://htmlacademy.ru/intensive/htmlcss" class="development-list__link" target="_blank">htmlacademy.ru</a></p>
