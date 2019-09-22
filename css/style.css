@@ -106,6 +106,7 @@ a {
 .offer__title {
     font-size: 16px;
     line-height: 23px;
+    font-weight: 400;
     font-style: italic;
     color: #ee3643;
     margin: 0;
@@ -242,7 +243,7 @@ a {
     background-color: #ca2c37;
 }
 
-.slider-drills_link:active {
+.slider-drills__link:active {
     background-color: #ba2732;
 }
 
@@ -270,7 +271,7 @@ a {
     background-color: #ca2c37;
 }
 
-.products-intro_link:active {
+.products-intro__link:active {
     background-color: #ba2732;
 }
 
@@ -391,16 +392,15 @@ a {
 
 .footer-menu__link {
     color: #f1f5f7;
-    border-bottom: 1px solid transparent;
 }
 
 .footer-menu__link:hover {
-    border-bottom: 1px solid #f1f5f7;
+    text-decoration: underline;
 }
 
 .footer-menu__link:active {
     color: rgba(241, 245, 247, 0.5);
-    border-bottom: 1px solid transparent;
+    text-decoration: none;
 }
 
 .footer-menu__link_suggest-link,
@@ -410,11 +410,12 @@ a {
 
 .footer-menu__link_suggest-link:hover,
 .development-list__link:hover {
-    border-bottom: 1px solid #ffd180;
+    text-decoration: underline;
 }
 
 .footer-menu__link_suggest-link:active {
     color: rgba(255, 209, 128, 0.5);
+    text-decoration: none;
 }
 
 .footer__copyright-development {
@@ -426,6 +427,7 @@ a {
 
 .development-list__link:active {
     color: #ee3643;
+    text-decoration: none;
 }
 
 .catalog-page {
@@ -462,17 +464,15 @@ a {
     font-size: 16px;
     line-height: 18px;
     color: #32425c;
-    border-bottom: 1px solid #32425c;
+    text-decoration: underline;
 }
 
 .account-menu__link:hover {
     color: #ee3643;
-    border-bottom: 1px solid #ee3643;
 }
 
 .account-menu__link:active {
     color: rgba(50, 66, 92, 0.3);
-    border-bottom: 1px solid rgba(50, 66, 92, 0.3);
 }
 
 .breadcrumb-list__link {
@@ -553,11 +553,20 @@ a {
     border-bottom: 1px solid transparent;
 }
 
+.sort__link_active {
+    color: #ee3643;
+    border-bottom: 1px solid transparent;
+}
+
 .control-list__link polygon:hover {
     fill: #000000;
 }
 
 .control-list__link polygon:active {
+    fill: #ee3643;
+}
+
+.control-list__link_active polygon {
     fill: #ee3643;
 }
 
@@ -575,6 +584,10 @@ a {
     font-weight: 700;
     color: #999999;
     margin: 0;
+}
+
+.products__price {
+    text-decoration: line-through;
 }
 
 .products__discount {
@@ -630,10 +643,16 @@ a {
 }
 
 .pagination__link:hover {
-    border: solid 1px #bdc6ca;
+    border: 1px solid #bdc6ca;
 }
 
 .pagination__link:active {
+    border: 1px solid #ee3643;
+}
+
+.pagination__link_active {
+    color: #ffffff;
+    background-color: #ee3643;
     border: solid 1px #ee3643;
 }
 
