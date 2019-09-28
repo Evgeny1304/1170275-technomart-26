@@ -9,25 +9,27 @@
 </head>
 <body>
 <header class="header">
-    <div class="header__intro container">
-        <a href="#" class="header__logo logo"><img src="img/technomart-logo.svg" alt="Логотип магазина Техномарт"></a>
-        <form action="#" class="header__search search">
-            <input class="search__field" type="search" placeholder="Поиск:">
-            <button class="search__button" type="submit">Найти</button>
-        </form>
-        <ul class="header__list user-list">
-            <li class="user-list__item"><a href="#" class="user-list__link">Закладки: <span>0</span></a></li>
-            <li class="user-list__item"><a href="#" class="user-list__link">Корзина: <span>0</span></a></li>
-            <li class="user-list__item"><a href="#" class="user-list__link user-list__link_checkout">Оформить заказ</a></li>
-        </ul>
+    <div class="header__intro-background">
+        <div class="header__intro container">
+            <a href="#" class="header__logo logo"><img src="img/technomart-logo.svg" alt="Логотип магазина Техномарт"></a>
+            <form action="#" class="header__search search">
+                <input class="search__field" type="search" placeholder="Поиск:">
+                <button class="search__button" type="submit">Найти</button>
+            </form>
+            <ul class="header__list user-list">
+                <li class="user-list__item"><a href="#" class="user-list__link">Закладки: <span>0</span></a></li>
+                <li class="user-list__item"><a href="#" class="user-list__link">Корзина: <span>0</span></a></li>
+                <li class="user-list__item"><a href="#" class="user-list__link user-list__link_checkout">Оформить заказ</a></li>
+            </ul>
+        </div>
     </div>
     <div class="header__description container">
         <div class="header__offer offer">
             <h1 class="offer__title">Интернет магазин строительных материалов и инструментов для ремонта</h1>
-            <div class="header__address address">
-                <a href="tel: +78125550555" class="address__phone">+7 (812) 555-05-55</a>
-                <p class="address__city">г. Санкт-Петербург, ул. Конюшенная, д. 19/8</p>
-            </div>
+        </div>
+        <div class="header__address address">
+            <a href="tel: +78125550555" class="address__phone">+7 (812) 555-05-55</a>
+            <p class="address__city">г. Санкт-Петербург, ул. Конюшенная, д. 19/8</p>
         </div>
         <ul class="header__registration registration">
             <li class="registration__item">
@@ -55,24 +57,34 @@
     <section class="features container">
         <ul class="features__shop-pluses shop-pluses">
             <li class="shop-pluses__item shop-pluses__item_material">
-                <h3 class="shop-pluses__text">Материалы</h3>
-                <a href="#" class="shop-pluses__link">На любой вкус</a>
+                <div class="shop-pluses__box">
+                    <h3 class="shop-pluses__text">Материалы</h3>
+                    <a href="#" class="shop-pluses__link">На любой вкус</a>
+                </div>
             </li>
             <li class="shop-pluses__item shop-pluses__item_tool">
-                <h3 class="shop-pluses__text">Инструмент</h3>
-                <a href="#" class="shop-pluses__link">На все случаи</a>
+                <div class="shop-pluses__box">
+                    <h3 class="shop-pluses__text">Инструмент</h3>
+                    <a href="#" class="shop-pluses__link">На все случаи</a>
+                </div>
             </li>
             <li class="shop-pluses__item shop-pluses__item_technique">
-                <h3 class="shop-pluses__text">Техника</h3>
-                <a href="#" class="shop-pluses__link">Для стройки</a>
+                <div class="shop-pluses__box">
+                    <h3 class="shop-pluses__text">Техника</h3>
+                    <a href="#" class="shop-pluses__link">Для стройки</a>
+                </div>
             </li>
             <li class="shop-pluses__item shop-pluses__item_discount">
-                <h3 class="shop-pluses__text">Скидки 50%</h3>
-                <a href="#" class="shop-pluses__link">На 350 товаров</a>
+                <div class="shop-pluses__box shop-pluses__box_discount">
+                    <h3 class="shop-pluses__text">Скидки 50%</h3>
+                    <a href="#" class="shop-pluses__link">На 350 товаров</a>
+                </div>
             </li>
             <li class="shop-pluses__item shop-pluses__item_delivery">
-                <h3 class="shop-pluses__text">Доставка</h3>
-                <a href="#" class="shop-pluses__link">Бесплатно</a>
+                <div class="shop-pluses__box shop-pluses__box_delivery">
+                    <h3 class="shop-pluses__text">Доставка</h3>
+                    <a href="#" class="shop-pluses__link">Бесплатно</a>
+                </div>
             </li>
         </ul>
         <div class="features__slider-drills slider-drills">
@@ -86,8 +98,8 @@
                 <p class="slider-drills__text">Настоящие мужские игрушки</p>
                 <a href="catalog.html" class="slider-drills__link">Открыть каталог</a>
             </div>
-            <button class="slider-drills__btn"><img src="img/icon-left-slider-drills.svg" alt="Кнопка Влево на слайдере товаров"></button>
-            <button class="slider-drills__btn"><img src="img/icon-right-slider-drills.svg" alt="Кнопка Вправо на слайдере товаров"></button>
+            <button class="slider-drills__btn slider-drills__btn_left"><img src="img/icon-left-slider-drills.svg" alt="Кнопка Влево на слайдере товаров"></button>
+            <button class="slider-drills__btn slider-drills__btn_right"><img src="img/icon-right-slider-drills.svg" alt="Кнопка Вправо на слайдере товаров"></button>
         </div>
     </section>
     <section class="popular-products container">
@@ -258,7 +270,7 @@
 <footer class="footer">
     <div class="footer__intro container">
         <a href="#" class="footer__logo logo"><img src="img/technomart-logo.svg" alt="Логотип магазина Техномарт"></a>
-        <ul class="footer__footer-menu footer-menu">
+        <ul class="footer__footer-menu footer-menu footer-menu-top">
             <li class="footer-menu__item"><a href="#" class="footer-menu__link">Компания</a></li>
             <li class="footer-menu__item"><a href="#" class="footer-menu__link">Новости</a></li>
             <li class="footer-menu__item"><a href="catalog.html" class="footer-menu__link">Каталог</a></li>
@@ -280,30 +292,34 @@
             <li class="footer-menu__item"><a href="#" class="footer-menu__link_suggest-link">Спецпредложения</a></li>
         </ul>
     </div>
-    <div class="footer__copyright-development container">
-        <div class="footer__copyright copyright">
-            <p class="copyright__text">&copy;2010-2019 Компания "Техномарт"</p>
-            <p class="copyright__text">Все права защищены</p>
+    <div class="footer__copyright-development-background">
+        <div class="footer__copyright-development container">
+            <div class="footer__copyright copyright">
+                <p class="copyright__text">&copy;2010-2019 Компания "Техномарт"</p>
+                <p class="copyright__text">Все права защищены</p>
+            </div>
+            <ul class="footer__social social-list">
+                <li class="social-list__item">
+                    <a href="https://www.vk.com" class="social-list__link" target="_blank"><img src="img/icon-vkontakte.svg" alt="Вконтакте" class="social-list__icon"></a>
+                </li>
+                <li class="social-list__item">
+                    <a href="https://www.facebook.com" class="social-list__link" target="_blank"><img src="img/icon-facebook.svg" alt="Facebook" class="social-list__icon"></a>
+                </li>
+                <li class="social-list__item">
+                    <a href="https://www.instagram.com" class="social-list__link" target="_blank"><img src="img/icon-instagram.svg" alt="Instagram" class="social-list__icon"></a>
+                </li>
+            </ul>
+            <ul class="footer__development development-list">
+                <li class="development-list__item">
+                    <p class="development-list__text">Обратная связь:</p>
+                    <a href="mailto:mail@htmlacademy.ru" class="development-list__link">mail@htmlacademy.ru</a>
+                </li>
+                <li class="development-list__item">
+                    <p class="development-list__text">Разработано -</p>
+                    <a href="https://htmlacademy.ru/intensive/htmlcss" class="development-list__link" target="_blank">htmlacademy.ru</a>
+                </li>
+            </ul>
         </div>
-        <ul class="footer__social social-list">
-            <li class="social-list__item">
-                <a href="https://www.vk.com" class="social-list__link" target="_blank"><img src="img/icon-vkontakte.svg" alt="Вконтакте" class="social-list__icon"></a>
-            </li>
-            <li class="social-list__item">
-                <a href="https://www.facebook.com" class="social-list__link" target="_blank"><img src="img/icon-facebook.svg" alt="Facebook" class="social-list__icon"></a>
-            </li>
-            <li class="social-list__item">
-                <a href="https://www.instagram.com" class="social-list__link" target="_blank"><img src="img/icon-instagram.svg" alt="Instagram" class="social-list__icon"></a>
-            </li>
-        </ul>
-        <ul class="footer__development development-list">
-            <li class="development-list__item">
-                <p class="development-list__text">Обратная связь: <a href="mailto:mail@htmlacademy.ru" class="development-list__link">mail@htmlacademy.ru</a></p>
-            </li>
-            <li class="development-list__item">
-                <p class="development-list__text">Разработано - <a href="https://htmlacademy.ru/intensive/htmlcss" class="development-list__link" target="_blank">htmlacademy.ru</a></p>
-            </li>
-        </ul>
     </div>
 </footer>
 </body>
