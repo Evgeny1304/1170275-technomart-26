@@ -47,11 +47,10 @@ a {
 }
 
 .logo {
-    display: block;
-    width: 220px;
-    height: 42px;
+    display: inline-block;
+    vertical-align: top;
+    padding: 13px 55px 15px 55px;
     text-align: center;
-    line-height: 47px;
     box-shadow: inset 0px -5px 0 0 rgba(0, 0, 0, 0.24);
     background-color: #ee3643;
 }
@@ -402,6 +401,10 @@ a {
     right: 20px;
 }
 
+.popular-products {
+    padding-bottom: 20px;
+}
+
 .products-intro {
     background-color: #f9f5f0;
     display: flex;
@@ -410,6 +413,7 @@ a {
     padding-bottom: 35px;
     padding-left: 30px;
     padding-right: 24px;
+    margin-bottom: 20px;
 }
 
 .products-intro__title {
@@ -440,8 +444,57 @@ a {
     background-color: #ba2732;
 }
 
+.products__item-main {
+    border: 1px solid #eaeaea;
+    text-align: center;
+    padding-bottom: 21px;
+    width: 220px;
+}
+
+.products__item-main:not(:nth-child(4n)){
+    margin-right: 20px;
+}
+
+.popular-brands {
+    padding-bottom: 85px;
+}
+
+.brands-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.brands-list__link {
+    display: inline-block;
+    vertical-align: top;
+    width: 220px;
+    height: 145px;
+    text-align: center;
+    line-height: 145px;
+    border: 1px solid #eaeaea;
+    background-color: #ffffff;
+}
+
+.brands-list__item:not(:nth-child(4n)){
+    margin-right: 20px;
+}
+
+.brands-list__item:nth-child(-n+4){
+    margin-bottom: 20px;
+}
+
+.brands-list__image {
+    vertical-align: middle;
+}
+
 .services {
     background-color: #f4f7f9;
+    padding-top: 68px;
+    padding-bottom: 51px;
+}
+
+.services__intro {
+    padding-bottom: 28px;
 }
 
 .services__title {
@@ -450,6 +503,7 @@ a {
     font-weight: 400;
     text-transform: uppercase;
     margin: 0;
+    margin-bottom: 38px;
 }
 
 .services__text,
@@ -460,6 +514,12 @@ a {
     margin: 0;
 }
 
+.services__delivery-guarantee-credit {
+    display: flex;
+    padding-top: 46px;
+    padding-bottom: 48px;
+}
+
 .services-list__btn {
     font-size: 21px;
     line-height: 30px;
@@ -468,16 +528,36 @@ a {
     background-color: #32425c;
     border: none;
     cursor: pointer;
+    display: inline-block;
+    vertical-align: top;
+    padding: 21px 140px 21px 22px;
+}
+
+.services-list__item:last-child button{
+    padding-right: 156px;
 }
 
 .services-list__btn:hover {
     background-color: #293449;
 }
 
-.services-list__btn:active {
+.services-list__btn:active,
+.services-list__btn_active{
     color: #32425c;
     box-shadow: 0px 1px 0 0 #ffffff, inset 0px 1px 0 0 #ffffff;
     background-color: #ffffff;
+}
+
+.services__service-items {
+    padding-left: 80px;
+}
+
+.service-item-guarantee {
+    display: none;
+}
+
+.service-item-credit {
+    display: none;
 }
 
 .service-item__title {
@@ -487,6 +567,7 @@ a {
     text-transform: uppercase;
     color: #32425c;
     margin: 0;
+    margin-bottom: 34px;
 }
 
 .service-item__link {
@@ -504,12 +585,23 @@ a {
     background-color: #ba2732;
 }
 
+.about-contacts {
+    padding-top: 82px;
+    padding-bottom: 86px;
+    display: flex;
+}
+
+.company {
+    padding-right: 120px;
+}
+
 .company__title,
 .contact__title {
     font-size: 30px;
     line-height: 30px;
     font-weight: 400;
     margin: 0;
+    margin-bottom: 38px;
 }
 
 .company__text,
@@ -518,6 +610,11 @@ a {
     font-size: 13px;
     line-height: 24px;
     margin: 0;
+    margin-bottom: 36px;
+}
+
+.delivery-list {
+    margin-bottom: 37px;
 }
 
 .delivery-list__item {
@@ -526,12 +623,19 @@ a {
     font-weight: 700;
 }
 
+.delivery-list__item:not(:last-child) {
+    margin-bottom: 24px;
+}
+
 .company__link,
 .contact__link {
     line-height: 18px;
     text-transform: uppercase;
     color: #ffffff;
     background-color: #ee3643;
+    display: inline-block;
+    vertical-align: top;
+    padding: 14px 40px 12px 40px;
 }
 
 .company__link:hover,
@@ -544,6 +648,11 @@ a {
     background-color: #ba2732;
 }
 
+.contact__map-link {
+    display: block;
+    margin-bottom: 54px;
+}
+
 .footer {
     font-size: 18px;
     line-height: 24px;
@@ -552,6 +661,10 @@ a {
 
 .footer__intro {
     display: flex;
+}
+
+.footer__logo {
+    padding: 20px 40px 25px 40px;
 }
 
 .footer-address__text {
@@ -661,6 +774,10 @@ a {
     background-color: #ffffff;
     cursor: pointer;
     border: none;
+    display: inline-block;
+    vertical-align: top;
+    padding: 14px 60px 12px 50px;
+    margin-bottom: 10px;
 }
 
 .account__logout:active {
@@ -680,11 +797,17 @@ a {
     list-style-type: none;
 }
 
+.account-menu {
+    display: flex;
+    padding-left: 17px;
+}
+
 .account-menu__link {
     font-size: 16px;
     line-height: 18px;
     color: #32425c;
     text-decoration: underline;
+    padding-left: 10px;
 }
 
 .account-menu__link:hover {
@@ -693,6 +816,18 @@ a {
 
 .account-menu__link:active {
     color: rgba(50, 66, 92, 0.3);
+}
+
+.breadcrumbs {
+    padding: 24px 0;
+}
+
+.breadcrumb-list {
+    display: flex;
+}
+
+.breadcrumb-list__item:not(:last-child) {
+    margin-right: 10px;
 }
 
 .breadcrumb-list__link {
@@ -711,6 +846,18 @@ a {
     text-transform: uppercase;
     color: #32425c;
     background-color: #f2f6f8;
+    padding: 32px 0 30px 34px;
+}
+
+.goods__filters-catalog {
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 60px;
+}
+
+.filters {
+    margin-right: 20px;
+    padding-right: 78px;
 }
 
 .filters__title {
@@ -719,13 +866,15 @@ a {
     font-weight: 400;
     text-transform: uppercase;
     background-color: #f7f3ec;
+    padding: 14px 0 15px 18px;
 }
 
 .product-filter-title {
     font-size: 17px;
     line-height: 30px;
     font-weight: 700;
-    margin: 0;
+    text-transform: uppercase;
+    margin: 20px 0;
 }
 
 .brand-filter,
@@ -749,10 +898,30 @@ a {
     border: solid 1px #e5e5e5;
     background-color: #ffffff;
     cursor: pointer;
+    display: inline-block;
+    vertical-align: top;
+    padding: 15px 39px;
 }
 
 .sort {
     background-color: #f7f3ec;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.sort__menu {
+    display: flex;
+    margin-left: auto;
+    margin-right: 46px;
+}
+
+.sort__control-list {
+    display: flex;
+}
+
+.sort__item:not(:last-child){
+    margin-right: 65px;
 }
 
 .sort__link {
@@ -778,6 +947,10 @@ a {
     border-bottom: 1px solid transparent;
 }
 
+.control-list__link {
+    margin-right: 20px;
+}
+
 .control-list__link polygon:hover {
     fill: #000000;
 }
@@ -793,6 +966,7 @@ a {
 .products {
     font-family: 'PT Sans', 'Arial', sans-serif;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .products__overlay {
@@ -803,8 +977,20 @@ a {
     border: 1px solid #eaeaea;
     text-align: center;
     padding-bottom: 21px;
-    margin-right: 22px;
-    width: 218px;
+    width: 220px;
+}
+
+.products__item:not(:nth-child(3n)){
+    margin-right: 20px;
+}
+
+.products__item:not(:nth-last-child(-n+3)){
+    margin-bottom: 20px;
+}
+
+.products__text-box {
+    padding-right: 30px;
+    padding-left: 30px;
 }
 
 .products__title {
@@ -813,6 +999,10 @@ a {
     font-weight: 700;
     margin: 0;
     margin-bottom: 18px;
+}
+
+.products__title_new {
+    margin-bottom: 50px;
 }
 
 .products__price,
@@ -880,12 +1070,25 @@ a {
     border: 3px solid rgba(50, 66, 92, 0.3);
 }
 
+.pagination {
+    display: flex;
+    margin-top: 52px;
+}
+
 .pagination__link {
     font-size: 13px;
     line-height: 18px;
+    color: #000000;
     text-transform: uppercase;
     background-color: #ffffff;
     border: 1px solid #e5e5e5;
+    display: inline-block;
+    vertical-align: top;
+    padding: 15px;
+}
+
+.pagination__item:not(:last-child) {
+    margin-right: 10px;
 }
 
 .pagination__link:hover {
@@ -904,6 +1107,8 @@ a {
 
 .conclusion {
     background-color: #f4f7f9;
+    padding-top: 67px;
+    padding-bottom: 73px;
 }
 
 .about-product__title {
@@ -912,6 +1117,7 @@ a {
     line-height: 30px;
     font-weight: 400;
     margin: 0;
+    margin-bottom: 36px;
 }
 
 .about-product__text {
