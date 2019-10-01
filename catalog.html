@@ -66,10 +66,24 @@
         <div class="goods__filters-catalog">
             <form action="#" class="goods__filters filters">
                 <h3 class="filters__title">Фильтр:</h3>
-                <div class="filters__price-filter price-filter">
-                    <h3 class="price-filter__title product-filter-title">Цена:</h3>
-                    <input type="range" class="price-filter__range">
-                </div>
+                <fieldset class="filters__price-filter price-filter">
+                    <legend class="price-filter__title product-filter-title">Цена:</legend>
+                    <div class="price-filter__range">
+                        <div class="price-filter__range-controls">
+                            <div class="price-filter__scale">
+                                <div class="price-filter__bar">
+
+                                </div>
+                            </div>
+                            <button type="button" class="price-filter__btn price-filter__btn_min"><img src="img/price-range-button.svg" width="20" height="23" alt="Кнопка управления ценой"></button>
+                            <button type="button" class="price-filter__btn price-filter__btn_max"><img src="img/price-range-button.svg" width="20" height="23" alt="Кнопка управления ценой"></button>
+                        </div>
+                        <div class="price-filter__price-fields">
+                            <input type="text" value="0" class="price-filter__min-price">
+                            <input type="text" value="30000" class="price-filter__min-price">
+                        </div>
+                    </div>
+                </fieldset>
                 <fieldset class="filters__brand-filter brand-filter">
                     <legend class="brand-filter__title product-filter-title">Производители:</legend>
                     <ul class="brand-filter__brand-checkbox-list brand-checkbox-list">

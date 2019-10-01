@@ -1094,7 +1094,6 @@ a {
 
 .filters {
     margin-right: 20px;
-    padding-right: 78px;
 }
 
 .filters__title {
@@ -1115,10 +1114,41 @@ a {
 }
 
 .brand-filter,
-.power-filter {
+.power-filter,
+.price-filter {
     border: none;
     margin: 0;
     padding: 0;
+}
+
+.price-filter__range-controls {
+    position: relative;
+    background-color: #f7f3ec;
+    margin-bottom: 9px;
+    padding-top: 39px;
+    padding-bottom: 39px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.price-filter__scale {
+    height: 2px;
+    background-color: #d7dcde;
+}
+
+.price-filter__bar {
+    height: 2px;
+    width: 85%;
+    background-color: #00ca74;
+}
+
+.price-filter__btn {
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    background-color: transparent;
 }
 
 .brand-checkbox-list__label,
