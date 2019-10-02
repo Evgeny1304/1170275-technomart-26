@@ -137,7 +137,7 @@ a {
     padding-left: 46px;
     padding-right: 31px;
     padding-top: 12px;
-    padding-bottom: 12px;
+    padding-bottom: 14px;
 }
 
 .user-list__item:nth-child(1) .user-list__link::before {
@@ -569,7 +569,7 @@ a {
     width: 220px;
 }
 
-.products__item-main:nth-child(4)::before {
+.products__item-main:nth-child(4n)::before {
     position: absolute;
     content: "";
     top: 0;
@@ -1004,6 +1004,10 @@ a {
     font-family: 'PT Sans', 'Arial', sans-serif;
 }
 
+.user-list__link_red {
+    background-color: #ee3643;
+}
+
 .account__logout {
     font-size: 21px;
     line-height: 21px;
@@ -1039,12 +1043,27 @@ a {
     padding-left: 17px;
 }
 
+.account-menu__item:last-child {
+    position: relative;
+}
+
+.account-menu__item:last-child::before {
+    position: absolute;
+    top: 7px;
+    left: 5px;
+    content: "";
+    width: 4px;
+    height: 5px;
+    border-radius: 5px;
+    background-color: #32425c;
+}
+
 .account-menu__link {
     font-size: 16px;
     line-height: 18px;
     color: #32425c;
     text-decoration: underline;
-    padding-left: 10px;
+    padding-left: 15px;
 }
 
 .account-menu__link:hover {
@@ -1065,6 +1084,26 @@ a {
 
 .breadcrumb-list__item:not(:last-child) {
     margin-right: 10px;
+}
+
+.breadcrumb-list__item {
+    position: relative;
+}
+
+.breadcrumb-list__item:not(:last-child)::after {
+    position: absolute;
+    top: 2px;
+    right: 0;
+    content: "";
+    width: 8px;
+    height: 12px;
+    background-image: url(../img/icon-right-breadcrumbs.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.breadcrumb-list__item:not(:last-child) .breadcrumb-list__link {
+    padding-right: 15px;
 }
 
 .breadcrumb-list__link {
@@ -1093,6 +1132,7 @@ a {
 }
 
 .filters {
+    width: 220px;
     margin-right: 20px;
 }
 
@@ -1119,6 +1159,12 @@ a {
     border: none;
     margin: 0;
     padding: 0;
+}
+
+.price-filter {
+    border-bottom: 1px solid #f7f3ec;
+    padding-bottom: 25px;
+    margin-top: 20px;
 }
 
 .price-filter__range-controls {
@@ -1151,11 +1197,171 @@ a {
     background-color: transparent;
 }
 
+.price-filter__btn_max {
+    left: 160px;
+}
+
+.price-filter__price-fields {
+    display: flex;
+}
+
+.price-filter__field {
+    text-align: center;
+    font-size: 17px;
+    line-height: 18px;
+    width: 95px;
+    background-color: #f7f3ec;
+    border: none;
+    padding-top: 12px;
+    padding-bottom: 14px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.price-filter__dash {
+    margin: 12px 10px 0 10px;
+}
+
+.brand-filter {
+    border-bottom: 1px solid #f7f3ec;
+    padding-bottom: 25px;
+    margin-top: 25px;
+}
+
 .brand-checkbox-list__label,
 .power-radio-list__label {
     font-size: 15px;
     line-height: 20px;
     text-transform: uppercase;
+    position: relative;
+    display: block;
+    cursor: pointer;
+    user-select: none;
+    padding-left: 35px;
+}
+
+.brand-checkbox-list__checkbox,
+.power-radio-list__radio {
+    display: none;
+}
+
+.brand-checkbox-list__item:not(:last-child),
+.power-radio-list__item:not(:last-child) {
+    margin-bottom: 17px;
+}
+
+.brand-checkbox-list__checkbox + .brand-checkbox-list__label::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 23px;
+    height: 23px;
+    background-image: url(../img/checkbox-off.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.brand-checkbox-list__checkbox:checked + .brand-checkbox-list__label::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 27px;
+    height: 23px;
+    background-image: url(../img/checkbox-on.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.brand-checkbox-list__checkbox:disabled + .brand-checkbox-list__label::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 23px;
+    height: 23px;
+    background-image: url(../img/checkbox-off.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    opacity: 0.3;
+}
+
+.brand-checkbox-list__checkbox:disabled + .brand-checkbox-list__label::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 27px;
+    height: 23px;
+    background-image: url(../img/checkbox-on.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    opacity: 0.3;
+}
+
+.brand-checkbox-list__checkbox:disabled + .brand-checkbox-list__label {
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.power-filter {
+    padding-bottom: 15px;
+    margin-top: 25px;
+    margin-bottom: 60px;
+}
+
+.power-radio-list__radio + .power-radio-list__label::before {
+    position: absolute;
+    top: -2px;
+    left: 0;
+    content: "";
+    width: 25px;
+    height: 25px;
+    background-image: url(../img/radio-off.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.power-radio-list__radio:checked + .power-radio-list__label::after {
+    position: absolute;
+    top: -2px;
+    left: 0;
+    content: "";
+    width: 25px;
+    height: 25px;
+    background-image: url(../img/radio-on.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.power-radio-list__radio:disabled + .power-radio-list__label::before {
+    position: absolute;
+    top: -2px;
+    left: 0;
+    content: "";
+    width: 25px;
+    height: 25px;
+    background-image: url(../img/radio-off.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    opacity: 0.3;
+}
+
+.power-radio-list__radio:disabled + .power-radio-list__label::after {
+    position: absolute;
+    top: -2px;
+    left: 0;
+    content: "";
+    width: 25px;
+    height: 25px;
+    background-image: url(../img/radio-on.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    opacity: 0.3;
+}
+
+.power-radio-list__radio:disabled + .power-radio-list__label {
+    color: rgba(0, 0, 0, 0.4);
 }
 
 .filters__btn {
@@ -1230,6 +1436,10 @@ a {
     fill: #ee3643;
 }
 
+.products-catalog__products-list {
+    max-width: 700px;
+}
+
 .products {
     font-family: 'PT Sans', 'Arial', sans-serif;
     display: flex;
@@ -1250,6 +1460,32 @@ a {
 
 .products__item:not(:nth-last-child(-n+3)) {
     margin-bottom: 20px;
+}
+
+.products__item:nth-child(3)::before,
+.products__item:nth-child(5)::before,
+.products__item:nth-child(7)::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 59px;
+    background-image: url(../img/new-flag.png);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.products__item:hover {
+    box-shadow: 0px 10px 25px 0 rgba(41, 52, 73, 0.5);
+}
+
+.products__item:hover .products__image {
+    opacity: 0;
+}
+
+.products__item:hover .products__overlay {
+    opacity: 1;
 }
 
 .products__text-box {
