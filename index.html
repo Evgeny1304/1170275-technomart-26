@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<input type="radio" name="slider" id="slide-1" class="slider-radio-first visually-hidden" checked>
+<input type="radio" name="slider" id="slide-2" class="slider-radio-second visually-hidden">
 <header class="header">
     <div class="header__intro-background">
         <div class="header__intro container">
@@ -67,7 +69,7 @@
     </nav>
 </header>
 
-<main>
+<main class="index-page">
     <section class="features container">
         <ul class="features__shop-pluses shop-pluses">
             <li class="shop-pluses__item shop-pluses__item_material">
@@ -102,6 +104,10 @@
             </li>
         </ul>
         <div class="features__slider-drills slider-drills">
+            <div class="slider-drills__controls">
+                <label class="slider-drills__control slider-drills__control_first" for="slide-1"></label>
+                <label class="slider-drills__control slider-drills__control_second" for="slide-2"></label>
+            </div>
             <div class="slider-drills__item slider-drills__item_first">
                 <h3 class="slider-drills__title">Дрели</h3>
                 <p class="slider-drills__text">Соседям на радость!</p>
@@ -293,22 +299,27 @@
                                                                                            width="300" height="158"
                                                                                            class="contact__small-map"></a>
             <div class="contact__map-popup modal-window">
-                <img src="img/big-map.jpg" alt="Расположение магазина на большой карте" width="940" height="446"
-                     class="contact__big-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5989424124007!2d30.32089461617356!3d59.93879686904788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1570381014695!5m2!1sru!2sru"
+                        width="940" height="446" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
                 <button type="button" class="contact__btn-close btn-close"><img src="img/icon-close-popup.svg"
                                                                                 alt="Кнопка закрытия окна"></button>
             </div>
             <a href="#" class="contact__link">Заблудились? Напишите нам!</a>
             <div class="contact__feedback-popup modal-window">
                 <form action="#" class="contact__feedback feedback">
-                    <label class="feedback__label">Ваше имя:<input type="text" placeholder="Имя Фамилия"
-                                                                   class="feedback__field"></label>
+
+                    <label class="feedback__label feedback__label_name">Ваше имя:<input type="text"
+                                                                                        placeholder="Имя Фамилия"
+                                                                                        class="feedback__field"></label>
                     <label class="feedback__label">Ваш e-mail:<input type="email" placeholder="email@example.com"
                                                                      class="feedback__field"></label>
+
                     <label class="feedback__label">Текст письма:<textarea name="feedback-text" cols="30" rows="10"
                                                                           placeholder="В свободной форме"
                                                                           class="feedback__text"></textarea></label>
-                    <button type="submit" class="feedback__btn">Отправить</button>
+                    <div class="feedback__background-btn">
+                        <button type="submit" class="feedback__btn">Отправить</button>
+                    </div>
                 </form>
                 <button type="button" class="contact__btn-close btn-close"><img src="img/icon-close-popup.svg"
                                                                                 alt="Кнопка закрытия окна"></button>
