@@ -21,10 +21,6 @@ a {
     text-decoration: none;
 }
 
-img {
-    max-width: 100%;
-}
-
 .visually-hidden:not(:focus):not(:active),
 input[type='checkbox'].visually-hidden,
 input[type='radio'].visually-hidden {
@@ -43,10 +39,6 @@ input[type='radio'].visually-hidden {
 .container {
     width: 940px;
     margin: 0 auto;
-}
-
-.modal-window {
-    display: none;
 }
 
 .header {
@@ -762,7 +754,7 @@ input[type='radio'].visually-hidden {
 .services__delivery-guarantee-credit {
     display: flex;
     padding-top: 37px;
-    padding-bottom: 48px;
+    padding-bottom: 7px;
 }
 
 .services-list__btn {
@@ -812,7 +804,7 @@ input[type='radio'].visually-hidden {
 }
 
 .service-item {
-    padding-bottom: 89px;
+    min-height: 280px;
 }
 
 .service-item__title {
@@ -830,6 +822,7 @@ input[type='radio'].visually-hidden {
     background-repeat: no-repeat;
     background-position: right 30px;
     padding-right: 348px;
+    display: none;
 }
 
 .service-item-guarantee {
@@ -975,7 +968,8 @@ input[type='radio'].visually-hidden {
     padding: 11px 59px 8px 64px;
 }
 
-.contact__map-popup {
+.map-popup {
+    display: none;
     position: fixed;
     left: 50%;
     top: 25px;
@@ -983,8 +977,9 @@ input[type='radio'].visually-hidden {
     box-shadow: 0px 20px 40px 0 rgba(0, 0, 0, 0.75);
 }
 
-.contact__feedback-popup,
+.feedback-popup,
 .add-cart-popup {
+    display: none;
     position: fixed;
     left: 50%;
     top: 100px;
@@ -995,7 +990,7 @@ input[type='radio'].visually-hidden {
     margin-left: -290px;
 }
 
-.contact__feedback-popup {
+.feedback-popup {
     padding-top: 48px;
 }
 
@@ -1041,6 +1036,16 @@ input[type='radio'].visually-hidden {
     resize: none;
     width: 460px;
     height: 114px;
+}
+
+.feedback__field:hover,
+.feedback__text:hover {
+    border: solid 2px #b5b5b5;
+}
+
+.feedback__field:focus,
+.feedback__text:focus {
+    border: solid 2px #ee3643;
 }
 
 .feedback__background-btn {
@@ -1932,4 +1937,53 @@ input[type='radio'].visually-hidden {
     font-size: 13px;
     line-height: 18px;
     margin: 0;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(-2000px);
+    }
+
+    70% {
+        transform: translateY(30px);
+    }
+
+    90% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes shake {
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: translateX(-10px);
+    }
+
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: translateX(10px);
+    }
+}
+
+.modal-show {
+    display: block;
+    animation: bounce 0.6s;
+}
+
+.service-item-show {
+    display: block;
 }
