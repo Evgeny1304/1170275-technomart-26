@@ -58,7 +58,7 @@
     </div>
     <nav class="header__navigation container">
         <ul class="menu">
-            <li class="menu__item"><a href="#" class="menu__link">Главная</a></li>
+            <li class="menu__item"><a href="#" class="menu__link menu__link_active">Главная</a></li>
             <li class="menu__item"><a href="#" class="menu__link">Компания</a></li>
             <li class="menu__item"><a href="catalog.html" class="menu__link">Каталог</a></li>
             <li class="menu__item"><a href="#" class="menu__link">Новости</a></li>
@@ -71,6 +71,7 @@
 
 <main class="index-page">
     <section class="features container">
+        <h2 class="features__title visually-hidden">Преимущества магазина</h2>
         <ul class="features__shop-pluses shop-pluses">
             <li class="shop-pluses__item shop-pluses__item_material">
                 <div class="shop-pluses__box">
@@ -373,20 +374,20 @@
     </div>
 </footer>
 <section class="map-popup">
-    <h3 class="map-popup__title visually-hidden">Интерактивная карта</h3>
+    <h2 class="map-popup__title visually-hidden">Интерактивная карта</h2>
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5989424124007!2d30.32089461617356!3d59.93879686904788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1570381014695!5m2!1sru!2sru"
             width="940" height="446" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
     <button type="button" class="map-popup__btn-close btn-close"><img src="img/icon-close-popup.svg"
                                                                       alt="Кнопка закрытия окна"></button>
 </section>
 <section class="feedback-popup">
-    <h3 class="feedback-popup__title visually-hidden">Форма обратной связи</h3>
+    <h2 class="feedback-popup__title visually-hidden">Форма обратной связи</h2>
     <form action="#" class="feedback-popup__feedback-form feedback">
 
-        <label class="feedback__label feedback__label_name">Ваше имя:<input type="text"
+        <label class="feedback__label feedback__label_name">Ваше имя:<input name="feedback-name" type="text"
                                                                             placeholder="Имя Фамилия"
                                                                             class="feedback__field"></label>
-        <label class="feedback__label">Ваш e-mail:<input type="email" placeholder="email@example.com"
+        <label class="feedback__label">Ваш e-mail:<input name="feedback-mail" type="email" placeholder="email@example.com"
                                                          class="feedback__field"></label>
 
         <label class="feedback__label">Текст письма:<textarea name="feedback-text" cols="30" rows="10"
@@ -399,6 +400,6 @@
     <button type="button" class="feedback-popup__btn-close btn-close"><img src="img/icon-close-popup.svg"
                                                                            alt="Кнопка закрытия окна"></button>
 </section>
-<script src="js/script.js"></script>
+<script src="js/indexpage-script.js"></script>
 </body>
 </html>

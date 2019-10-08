@@ -24,7 +24,7 @@
             </form>
             <ul class="header__list user-list">
                 <li class="user-list__item"><a href="#" class="user-list__link">Закладки: <span>0</span></a></li>
-                <li class="user-list__item"><a href="#" class="user-list__link user-list__link_buy">Корзина: <span>10</span></a></li>
+                <li class="user-list__item"><a href="#" class="user-list__link">Корзина: <span>10</span></a></li>
                 <li class="user-list__item"><a href="#" class="user-list__link user-list__link_checkout">Оформить заказ</a></li>
             </ul>
         </div>
@@ -71,7 +71,7 @@
         <ul class="menu">
             <li class="menu__item"><a href="index.html" class="menu__link">Главная</a></li>
             <li class="menu__item"><a href="#" class="menu__link">Компания</a></li>
-            <li class="menu__item"><a href="#" class="menu__link">Каталог</a></li>
+            <li class="menu__item"><a href="#" class="menu__link menu__link_active">Каталог</a></li>
             <li class="menu__item"><a href="#" class="menu__link">Новости</a></li>
             <li class="menu__item"><a href="#" class="menu__link">Спецпредложения</a></li>
             <li class="menu__item"><a href="#" class="menu__link">Доставка</a></li>
@@ -114,39 +114,39 @@
                 </fieldset>
                 <fieldset class="filters__brand-filter brand-filter">
                     <legend class="brand-filter__title product-filter-title">Производители:</legend>
-                    <ul class="brand-filter__brand-checkbox-list brand-checkbox-list">
-                        <li class="brand-checkbox-list__item">
-                            <input type="checkbox" id="brand1" class="brand-checkbox-list__checkbox visually-hidden" checked>
-                            <label for="brand1" class="brand-checkbox-list__label">BOSCH</label>
+                    <ul class="brand-filter__brand-list brand-list">
+                        <li class="brand-list__item">
+                            <input type="checkbox" id="brand1" class="brand-list__checkbox visually-hidden" checked>
+                            <label for="brand1" class="brand-list__label">BOSCH</label>
                         </li>
-                        <li class="brand-checkbox-list__item">
-                            <input type="checkbox" id="brand2" class="brand-checkbox-list__checkbox visually-hidden">
-                            <label for="brand2" class="brand-checkbox-list__label">ИНТЕРСКОЛ</label>
+                        <li class="brand-list__item">
+                            <input type="checkbox" id="brand2" class="brand-list__checkbox visually-hidden">
+                            <label for="brand2" class="brand-list__label">ИНТЕРСКОЛ</label>
                         </li>
-                        <li class="brand-checkbox-list__item">
-                            <input type="checkbox" id="brand3" class="brand-checkbox-list__checkbox visually-hidden" checked>
-                            <label for="brand3" class="brand-checkbox-list__label">MAKITA</label>
+                        <li class="brand-list__item">
+                            <input type="checkbox" id="brand3" class="brand-list__checkbox visually-hidden" checked>
+                            <label for="brand3" class="brand-list__label">MAKITA</label>
                         </li>
-                        <li class="brand-checkbox-list__item">
-                            <input type="checkbox" id="brand4" class="brand-checkbox-list__checkbox visually-hidden">
-                            <label for="brand4" class="brand-checkbox-list__label">DEWALT</label>
+                        <li class="brand-list__item">
+                            <input type="checkbox" id="brand4" class="brand-list__checkbox visually-hidden">
+                            <label for="brand4" class="brand-list__label">DEWALT</label>
                         </li>
-                        <li class="brand-checkbox-list__item">
-                            <input type="checkbox" id="brand5" class="brand-checkbox-list__checkbox visually-hidden">
-                            <label for="brand5" class="brand-checkbox-list__label">HITACHI</label>
+                        <li class="brand-list__item">
+                            <input type="checkbox" id="brand5" class="brand-list__checkbox visually-hidden">
+                            <label for="brand5" class="brand-list__label">HITACHI</label>
                         </li>
                     </ul>
                 </fieldset>
                 <fieldset class="filters__power-filter power-filter">
                     <legend class="power-filter__title product-filter-title">Питание:</legend>
-                    <ul class="power-filter__power-radio-list power-radio-list">
-                        <li class="power-radio-list__item">
-                            <input type=radio id="power1" class="power-radio-list__radio visually-hidden" name="power-group" checked>
-                            <label for="power1" class="power-radio-list__label">Аккумуляторные</label>
+                    <ul class="power-filter__power-list power-list">
+                        <li class="power-list__item">
+                            <input type=radio id="power1" class="power-list__radio visually-hidden" name="power-group" checked>
+                            <label for="power1" class="power-list__label">Аккумуляторные</label>
                         </li>
-                        <li class="power-radio-list__item">
-                            <input type=radio id="power2" class="power-radio-list__radio visually-hidden" name="power-group">
-                            <label for="power2" class="power-radio-list__label">Сетевые</label>
+                        <li class="power-list__item">
+                            <input type=radio id="power2" class="power-list__radio visually-hidden" name="power-group">
+                            <label for="power2" class="power-list__label">Сетевые</label>
                         </li>
                     </ul>
                 </fieldset>
@@ -392,7 +392,7 @@
     </div>
 </footer>
 <section class="add-cart-popup">
-    <h3 class="add-cart-popup__title visually-hidden">Окно покупки товара</h3>
+    <h2 class="add-cart-popup__title visually-hidden">Окно покупки товара</h2>
     <p class="add-cart-popup__text">Товар добавлен в корзину!</p>
     <ul class="add-cart-popup__add-cart-menu add-cart-menu">
         <li class="add-cart-menu__item"><a href="#" class="add-cart-menu__link">Оформить заказ</a></li>
@@ -400,5 +400,6 @@
     </ul>
     <button type="button" class="add-cart-popup__btn-close btn-close"><img src="img/icon-close-popup.svg" alt="Кнопка закрытия окна"></button>
 </section>
+<script src="js/catalogpage-script.js"></script>
 </body>
 </html>

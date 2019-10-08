@@ -78,7 +78,7 @@ creditBtn.addEventListener('click', function (event) {
 //Открытие модального окна с картой
 var mapLink = document.querySelector('.map-link');
 var mapPopup = document.querySelector('.map-popup');
-var popupClose = document.querySelector('.btn-close');
+var popupClose = mapPopup.querySelector('.btn-close');
 
 mapLink.addEventListener('click', function (event) {
     event.preventDefault();
@@ -90,11 +90,63 @@ popupClose.addEventListener('click', function (event) {
     mapPopup.classList.remove('modal-show');
 });
 
+
+//Открытие модального окна с формой обратной связи
+var feedbackPopup = document.querySelector('.feedback-popup');
+var feedbackLink = document.querySelector('.contact__link');
+var feedbackClose = feedbackPopup.querySelector('.btn-close');
+var feedbackForm = feedbackPopup.querySelector('.feedback');
+var feedbackName = feedbackPopup.querySelector('[name=feedback-name]');
+var feedbackMail = feedbackPopup.querySelector('[name=feedback-mail]');
+var feedbackText = feedbackPopup.querySelector('[name=feedback-text]');
+
+var isStorageSupport = true;
+var storage = '';
+
+try {
+    storage = localStorage.getItem('name');
+} catch (error) {
+    isStorageSupport = false;
+}
+
+feedbackLink.addEventListener('click', function (event) {
+    event.preventDefault();
+    feedbackPopup.classList.add('modal-show');
+    if (storage) {
+        feedbackName.value = storage;
+        feedbackMail.focus();
+    } else {
+        feedbackName.focus();
+    }
+});
+
+feedbackClose.addEventListener('click', function (event) {
+    event.preventDefault();
+    feedbackPopup.classList.remove('modal-show');
+    feedbackPopup.classList.remove('modal-error');
+});
+
+feedbackForm.addEventListener('submit', function (event) {
+    if (!feedbackName.value || !feedbackMail.value || !feedbackText.value) {
+        event.preventDefault();
+        feedbackPopup.classList.add('modal-error');
+    } else {
+        if (isStorageSupport) {
+            localStorage.setItem('name', feedbackName.value);
+            localStorage.setItem('mail', feedbackMail.value);
+            localStorage.setItem('text', feedbackText.value);
+        }
+    }
+});
+
+//Обработчик события на закрытие модальных окон кнопкой ESC
 window.addEventListener('keydown', function (event) {
     if (event.keyCode === 27) {
         event.preventDefault();
-        if (mapPopup.classList.contains('modal-show')) {
+        if (mapPopup.classList.contains('modal-show') || feedbackPopup.classList.contains('modal-show')) {
             mapPopup.classList.remove('modal-show');
+            feedbackPopup.classList.remove('modal-show');
+            feedbackPopup.classList.remove('modal-error');
         }
     }
 
