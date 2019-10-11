@@ -319,7 +319,7 @@ input[type='radio'].visually-hidden {
 .menu {
     display: flex;
     flex-wrap: wrap;
-    padding: 0 19px;
+    padding: 0 18px;
 }
 
 .menu__link {
@@ -967,7 +967,7 @@ input[type='radio'].visually-hidden {
 }
 
 .contact__link {
-    padding: 11px 59px 8px 64px;
+    padding: 11px 59px 8px 63px;
 }
 
 .map-popup {
