@@ -4,8 +4,8 @@ var sliderBtnRight = document.querySelector('.slider-drills__btn_right');
 var sliderRadioFirst = document.querySelector('.slider-radio-first');
 var sliderRadioSecond = document.querySelector('.slider-radio-second');
 
-sliderBtnRight.addEventListener('click', function (event) {
-    event.preventDefault();
+sliderBtnRight.addEventListener('click', function (evt) {
+    evt.preventDefault();
     if (sliderRadioSecond.checked) {
         sliderRadioFirst.checked = true;
     } else {
@@ -13,8 +13,8 @@ sliderBtnRight.addEventListener('click', function (event) {
     }
 });
 
-sliderBtnLeft.addEventListener('click', function (event) {
-    event.preventDefault();
+sliderBtnLeft.addEventListener('click', function (evt) {
+    evt.preventDefault();
     if (sliderRadioFirst.checked) {
         sliderRadioSecond.checked = true;
     } else {
@@ -31,8 +31,8 @@ var deliveryBlock = document.querySelector('.service-item-delivery');
 var garantBlock = document.querySelector('.service-item-guarantee');
 var creditBlock = document.querySelector('.service-item-credit');
 
-deliveryBtn.addEventListener('click', function (event) {
-    event.preventDefault();
+deliveryBtn.addEventListener('click', function (evt) {
+    evt.preventDefault();
     if (garantBtn.classList.contains('services-list__btn_active') || creditBtn.classList.contains('services-list__btn_active')) {
         garantBtn.classList.remove('services-list__btn_active');
         creditBtn.classList.remove('services-list__btn_active');
@@ -46,8 +46,8 @@ deliveryBtn.addEventListener('click', function (event) {
 });
 
 
-garantBtn.addEventListener('click', function (event) {
-    event.preventDefault();
+garantBtn.addEventListener('click', function (evt) {
+    evt.preventDefault();
     if (deliveryBtn.classList.contains('services-list__btn_active') || creditBtn.classList.contains('services-list__btn_active')) {
         deliveryBtn.classList.remove('services-list__btn_active');
         creditBtn.classList.remove('services-list__btn_active');
@@ -60,8 +60,8 @@ garantBtn.addEventListener('click', function (event) {
     }
 });
 
-creditBtn.addEventListener('click', function (event) {
-    event.preventDefault();
+creditBtn.addEventListener('click', function (evt) {
+    evt.preventDefault();
     if (deliveryBtn.classList.contains('services-list__btn_active') || garantBtn.classList.contains('services-list__btn_active')) {
         deliveryBtn.classList.remove('services-list__btn_active');
         garantBtn.classList.remove('services-list__btn_active');
@@ -80,13 +80,13 @@ var mapLink = document.querySelector('.map-link');
 var mapPopup = document.querySelector('.map-popup');
 var popupClose = mapPopup.querySelector('.btn-close');
 
-mapLink.addEventListener('click', function (event) {
-    event.preventDefault();
+mapLink.addEventListener('click', function (evt) {
+    evt.preventDefault();
     mapPopup.classList.add('modal-show');
 });
 
-popupClose.addEventListener('click', function (event) {
-    event.preventDefault();
+popupClose.addEventListener('click', function (evt) {
+    evt.preventDefault();
     mapPopup.classList.remove('modal-show');
 });
 
@@ -109,8 +109,8 @@ try {
     isStorageSupport = false;
 }
 
-feedbackLink.addEventListener('click', function (event) {
-    event.preventDefault();
+feedbackLink.addEventListener('click', function (evt) {
+    evt.preventDefault();
     feedbackPopup.classList.add('modal-show');
     if (storage) {
         feedbackName.value = storage;
@@ -120,15 +120,15 @@ feedbackLink.addEventListener('click', function (event) {
     }
 });
 
-feedbackClose.addEventListener('click', function (event) {
-    event.preventDefault();
+feedbackClose.addEventListener('click', function (evt) {
+    evt.preventDefault();
     feedbackPopup.classList.remove('modal-show');
     feedbackPopup.classList.remove('modal-error');
 });
 
-feedbackForm.addEventListener('submit', function (event) {
+feedbackForm.addEventListener('submit', function (evt) {
     if (!feedbackName.value || !feedbackMail.value || !feedbackText.value) {
-        event.preventDefault();
+        evt.preventDefault();
         feedbackPopup.classList.add('modal-error');
     } else {
         if (isStorageSupport) {
@@ -140,9 +140,9 @@ feedbackForm.addEventListener('submit', function (event) {
 });
 
 //Обработчик события на закрытие модальных окон кнопкой ESC
-window.addEventListener('keydown', function (event) {
-    if (event.keyCode === 27) {
-        event.preventDefault();
+window.addEventListener('keydown', function (evt) {
+    if (evt.keyCode === 27) {
+        evt.preventDefault();
         if (mapPopup.classList.contains('modal-show') || feedbackPopup.classList.contains('modal-show')) {
             mapPopup.classList.remove('modal-show');
             feedbackPopup.classList.remove('modal-show');
