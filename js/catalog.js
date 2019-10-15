@@ -55,5 +55,4 @@ window.addEventListener('keydown', function (evt) {
             addCartPopup.classList.remove('modal-show');
         }
     }
-
 });

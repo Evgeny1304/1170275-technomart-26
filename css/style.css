@@ -155,7 +155,7 @@ input[type='radio'].visually-hidden {
 
 .user-list__item:nth-child(1) .user-list__link::before {
     position: absolute;
-    content: "";
+    content: '';
     top: 14px;
     left: 17px;
     width: 14px;
@@ -168,7 +168,7 @@ input[type='radio'].visually-hidden {
 
 .user-list__item:nth-child(2) .user-list__link::before {
     position: absolute;
-    content: "";
+    content: '';
     top: 14px;
     left: 17px;
     width: 15px;
@@ -269,6 +269,7 @@ input[type='radio'].visually-hidden {
 .registration {
     display: flex;
     flex-wrap: wrap;
+    max-width: 270px;
 }
 
 .registration__item {
@@ -288,14 +289,15 @@ input[type='radio'].visually-hidden {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 10px;
 }
 
 .registration__link svg {
     margin-right: 14px;
 }
 
-.registration__item:not(:first-child) {
-    margin-left: 10px;
+.registration__item:not(:nth-child(2n)) {
+    margin-right: 10px;
 }
 
 .registration__item:nth-child(2) .registration__link {
@@ -348,8 +350,7 @@ input[type='radio'].visually-hidden {
     background-color: #293449;
 }
 
-.menu__link:active,
-.menu__link_active {
+.menu__link:active {
     color: rgba(255, 255, 255, 0.5);
     background-color: #1d2739;
 }
@@ -392,7 +393,7 @@ input[type='radio'].visually-hidden {
 
 .shop-pluses__item_material::before {
     position: absolute;
-    content: "";
+    content: '';
     top: 0;
     right: 0;
     width: 60px;
@@ -557,16 +558,22 @@ input[type='radio'].visually-hidden {
     position: absolute;
     top: 114px;
     border: none;
-    background-color: transparent;
     cursor: pointer;
+    width: 22px;
+    height: 40px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: 0 0;
 }
 
 .slider-drills__btn_left {
     left: 25px;
+    background-image:url(../img/icon-left-slider-drills.svg);
 }
 
 .slider-drills__btn_right {
     right: 20px;
+    background-image:url(../img/icon-right-slider-drills.svg);
 }
 
 .slider-drills__controls {
@@ -602,7 +609,7 @@ input[type='radio'].visually-hidden {
     position: absolute;
     top: 2px;
     left: 2px;
-    content: "";
+    content: '';
     width: 6px;
     height: 6px;
     border-radius: 6px;
@@ -662,7 +669,7 @@ input[type='radio'].visually-hidden {
 
 .products__item-main:nth-child(4n)::before {
     position: absolute;
-    content: "";
+    content: '';
     top: 0;
     right: 0;
     width: 60px;
@@ -809,7 +816,7 @@ input[type='radio'].visually-hidden {
 
 .services__description::before {
     position: absolute;
-    content: "";
+    content: '';
     top: -41px;
     left: -7px;
     width: 10px;
@@ -936,7 +943,7 @@ input[type='radio'].visually-hidden {
 
 .company__item::before {
     position: absolute;
-    content: "";
+    content: '';
     top: 9px;
     left: 0;
     width: 25px;
@@ -1197,7 +1204,7 @@ input[type='radio'].visually-hidden {
     position: absolute;
     top: 7px;
     left: 5px;
-    content: "";
+    content: '';
     width: 4px;
     height: 4px;
     border-radius: 4px;
@@ -1249,7 +1256,7 @@ input[type='radio'].visually-hidden {
     position: absolute;
     top: 2px;
     right: 2px;
-    content: "";
+    content: '';
     width: 8px;
     height: 12px;
     background-image: url(../img/icon-right-breadcrumbs.svg);
@@ -1354,7 +1361,12 @@ input[type='radio'].visually-hidden {
     position: absolute;
     top: 30px;
     left: 0;
+    width: 20px;
+    height: 23px;
     background-color: transparent;
+    background-image: url(../img/price-range-button.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
 }
 
 .price-filter__btn_min {
@@ -1414,7 +1426,7 @@ input[type='radio'].visually-hidden {
     position: absolute;
     top: 0;
     left: 0;
-    content: "";
+    content: '';
     width: 23px;
     height: 23px;
     background-image: url(../img/checkbox-off.svg);
@@ -1451,7 +1463,7 @@ input[type='radio'].visually-hidden {
     position: absolute;
     top: -2px;
     left: 0;
-    content: "";
+    content: '';
     width: 25px;
     height: 25px;
     background-image: url(../img/radio-off.svg);
@@ -1588,7 +1600,7 @@ input[type='radio'].visually-hidden {
 .products__item:nth-child(5)::before,
 .products__item:nth-child(7)::before {
     position: absolute;
-    content: "";
+    content: '';
     top: 0;
     right: 0;
     width: 60px;
@@ -1691,7 +1703,7 @@ input[type='radio'].visually-hidden {
 
 .products__btn::before {
     position: absolute;
-    content: "";
+    content: '';
     top: 11px;
     left: 14px;
     width: 15px;
@@ -1904,7 +1916,12 @@ input[type='radio'].visually-hidden {
     cursor: pointer;
     position: absolute;
     top: 9px;
-    right: 0;
+    right: 9px;
+    width: 21px;
+    height: 21px;
+    background-image: url(../img/icon-close-popup.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
 }
 
 .add-cart-popup {

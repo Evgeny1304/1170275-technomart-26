@@ -149,5 +149,4 @@ window.addEventListener('keydown', function (evt) {
             feedbackPopup.classList.remove('modal-error');
         }
     }
-
 });
