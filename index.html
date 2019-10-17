@@ -13,7 +13,7 @@
 <header class="header">
     <div class="header__intro-background">
         <div class="header__intro container">
-            <a href="#" class="header__logo logo"><img src="img/technomart-logo.svg" alt="Логотип магазина Техномарт" width="109" height="19"></a>
+            <a class="header__logo logo"><img src="img/technomart-logo.svg" alt="Логотип магазина Техномарт" width="109" height="19"></a>
             <form action="#" class="header__search search">
                 <input class="search__field" type="search" placeholder="Поиск:">
                 <button class="search__button" type="submit">
@@ -36,25 +36,25 @@
         </div>
         <div class="header__address address">
             <a href="tel:+78125550555" class="address__phone">+7 (812) 555-05-55</a>
-            <p class="address__city">г. Санкт-Петербург, ул. Конюшенная, д. 19/8</p>
+            <p class="address__city">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
         </div>
         <ul class="header__registration registration">
             <li class="registration__item">
-                <a href="#" class="registration__link">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17">
+                <a href="login.html" class="registration__link">
+                    <svg class="registration__icon" xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17">
                         <path fill="#c5c5c5" d="M14.875 8.5L6 0v6H0v5h6v6z"/>
                         <path fill="#c5c5c5" d="M16.986 15.01h-5.027V17h5.027c2.178 0 3.004-1.81 3.029-3.026V3.028C19.99 1.811 19.164 0 16.986 0h-5.027v1.99h5.027c.839 0 .992.681 1.01 1.057v10.904c-.017.376-.171 1.059-1.01 1.059z"/>
                     </svg>
                     Войти</a>
             </li>
             <li class="registration__item">
-                <a href="#" class="registration__link">Регистрация</a>
+                <a href="registration.html" class="registration__link">Регистрация</a>
             </li>
         </ul>
     </div>
     <nav class="header__navigation container">
         <ul class="header__menu menu">
-            <li class="menu__item"><a href="#" class="menu__link">Главная</a></li>
+            <li class="menu__item"><a class="menu__link">Главная</a></li>
             <li class="menu__item"><a href="#" class="menu__link">Компания</a></li>
             <li class="menu__item"><a href="catalog.html" class="menu__link">Каталог</a></li>
             <li class="menu__item"><a href="#" class="menu__link">Новости</a></li>
@@ -179,9 +179,9 @@
         </ul>
     </section>
     <section class="popular-brands container">
-        <div class="popular-brands__intro products-intro">
+        <div class="popular-brands__intro products-intro brands-intro">
             <h2 class="products-intro__title">Популярные производители:</h2>
-            <a href="#" class="products-intro__link">Все производители</a>
+            <a href="#" class="products-intro__link brands-intro__link">Все производители</a>
         </div>
         <ul class="popular-brands__list brands-list">
             <li class="brands-list__item">
@@ -280,14 +280,14 @@
             <p class="contact__text">Вы можете забрать товар сами,
                 заехав в наш офис:</p>
             <a href="https://goo.gl/maps/Wi1ShnMR9wf9tgB36" class="contact__map-link map-link"><img src="img/small-map.jpg" alt="Расположение магазина на карте" width="300" height="158" class="contact__small-map"></a>
-            <a href="#" class="contact__link">Заблудились? Напишите нам!</a>
+            <a href="feedback.html" class="contact__link">Заблудились? Напишите нам!</a>
         </div>
     </section>
 </main>
 
 <footer class="footer">
     <div class="footer__intro container">
-        <a href="index.html" class="footer__logo logo"><img src="img/technomart-logo.svg" alt="Логотип магазина Техномарт"></a>
+        <a class="footer__logo logo"><img src="img/technomart-logo.svg" alt="Логотип магазина Техномарт" width="138" height="23"></a>
         <ul class="footer__footer-menu footer-menu footer-menu-top">
             <li class="footer-menu__item"><a href="#" class="footer-menu__link">Компания</a></li>
             <li class="footer-menu__item"><a href="#" class="footer-menu__link">Новости</a></li>
@@ -313,7 +313,7 @@
     <div class="footer__copyright-development-background">
         <div class="footer__copyright-development container">
             <div class="footer__copyright copyright">
-                <p class="copyright__text">&copy;2010-2019 Компания "Техномарт"</p>
+                <p class="copyright__text">&copy; 2010-2019 Компания &laquo;Техномарт&raquo;</p>
                 <p class="copyright__text">Все права защищены</p>
             </div>
             <ul class="footer__social social-list">
@@ -359,7 +359,7 @@
 </section>
 <section class="feedback-popup">
     <h2 class="feedback-popup__title visually-hidden">Форма обратной связи</h2>
-    <form action="form.html" class="feedback-popup__form feedback">
+    <form action="https://echo.htmlacademy.ru" class="feedback-popup__form feedback">
         <label class="feedback__label feedback__label_name">Ваше имя:<input name="feedback-name" type="text" placeholder="Имя Фамилия" class="feedback__field"></label>
         <label class="feedback__label">Ваш e-mail:<input name="feedback-mail" type="email" placeholder="email@example.com" class="feedback__field"></label>
 
