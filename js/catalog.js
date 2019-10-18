@@ -16,7 +16,6 @@ for (var i = 0; i < addCartBtns.length; i++) {
     addCartBtns[i].addEventListener('click', function (evt) {
         evt.preventDefault();
         productCartSum++;
-        userLinkCart.classList.add('user-list__link_add-product');
         addCartPopup.classList.add('modal-show');
         productCartCount.textContent = String(productCartSum);
     });

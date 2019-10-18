@@ -1176,6 +1176,10 @@ input[type='radio'].visually-hidden {
     font-family: 'PT Sans', 'Arial', sans-serif;
 }
 
+.header-inner .user-list__item:nth-child(2) .user-list__link {
+    padding-right: 27px;
+}
+
 .user-list__link_add-product {
     background-color: #ee3643;
 }
